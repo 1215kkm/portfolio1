@@ -1,0 +1,81 @@
+@charset "UTF-8";
+
+@import url(reset.css);
+@import url(font.css);
+
+html {font-size: 20px;}
+/* 
+170 : 8.5rem
+100 : 5rem
+
+30 : 1.45rem
+29 : 1.4rem
+28 : 1.35rem
+27 : 1.3rem
+26 : 1.25rem
+24 : 1.2rem
+23 : 1.15rem
+22 : 1.1rem
+21 : 1.05rem
+19 : 0.95rem
+18 : 0.9rem
+17 : 0.85rem
+16 : 0.8rem
+15 : 0.75rem
+14 : 0.7rem
+13 : 0.65rem
+12 : 0.6rem
+*/
+body {
+}
+
+body.sun {
+}
+
+
+
+
+h2 {font-family: 'SBAggroB';}
+
+.center1300 {width: 1300px; margin: 0 auto;}
+
+body {height: 100vh; background: url('../images/bg.jpg') center top/cover;}
+header {width: 90%; height: 8.5rem; margin: 0 auto; }
+header h1 {width: 200px; height: 100px; }
+
+
+section > div {height: 100vh;}
+section #section3 {display: flex; justify-content: center; gap:138px}
+
+section #section3 > div {width: 280px; height: 280px; position: relative;}
+
+section #section3 > div:before,
+section #section3 > div:after {content:"";position: absolute; width: 100%; height: 100%; transition: 5s; }
+section #section3 > div:before {background: #0d1016; display: none;}
+section #section3 > div:after {width: 282px; height: 282px; background:linear-gradient(-45deg, 
+  #5b6c99 10%,
+  #ca02e9 20%,
+  #5b6c99) 10%;  }
+
+section #section3 > div:hover:after {background:linear-gradient(-45deg, 
+  #5b6c99 10%, 
+  #ca02e9 50%, 
+  #5b6c99) 20%;}
+
+section #section3 > div:nth-child(1):before {clip-path: circle(50% at 50% 50%); z-index: 2;}
+section #section3 > div:nth-child(1):after {clip-path: circle(50% at 50% 50%); z-index: 1; left: -1px; top: -1px;}
+
+
+section #section3 > div:nth-child(2):before {clip-path: polygon(100% 0, 0 37%, 65% 100%); z-index: 2;}
+section #section3 > div:nth-child(2):after {clip-path: polygon(100% 0, 0 37%, 65% 100%); z-index: 1; left: -1px; top: -1px;}
+
+
+section #section3 > div:nth-child(3):before {clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); z-index: 2;}
+section #section3 > div:nth-child(3):after {clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); z-index: 1; left: -1px; top: -1px;}
+
+section #section3 h2 {font-size: 1.8rem; height: 110px; line-height: 110px; margin-top: 58px; position: relative; z-index: 3; font-weight: bold; text-align: center; letter-spacing: 0.5rem; /* text-shadow:-1px -1px 0  rgba(255, 162, 0, 0.8),1px 1px 0 #000 */; position: absolute; left: 50%; transform: translateX(-50%);}
+section #section3 h2:before,
+section #section3 h2:after {content:attr(data-h2); position: absolute; left: 0; top: 0;}
+
+section #section3 h2:before {color:rgba(255, 162, 0, 1); z-index: 1; left: 0px; top: 0px;}
+section #section3 h2:after {color:#c2670e; z-index: 2; left: 1px; top: 1px;}
